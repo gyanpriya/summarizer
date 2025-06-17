@@ -1,0 +1,8 @@
+flask
+flask-cors
+streamlit
+requests
+feedparser
+newspaper3k
+python-dotenv
+

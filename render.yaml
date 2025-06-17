@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: summarizer-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: HUGGINGFACE_API_KEY
+        sync: false
+
+  - type: web
+    name: summarizer-frontend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run streamlit_app.py --server.port=10000
+    envVars:
+      - key: HUGGINGFACE_API_KEY
+        sync: false
