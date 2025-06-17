@@ -1,5 +1,8 @@
 import streamlit as st
 import requests
+import os
+
+port = os.environ.get("PORT", 8501)
 
 st.title("📰 Topic Summarizer")
 topic = st.text_input("Enter a topic (e.g. AI, SpaceX, Bitcoin):")
