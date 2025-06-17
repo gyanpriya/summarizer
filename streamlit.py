@@ -7,7 +7,7 @@ topic = st.text_input("Enter a topic (e.g. AI, SpaceX, Bitcoin):")
 if st.button("Summarize"):
     with st.spinner("Fetching and summarizing..."):
         response = requests.post(
-            "https://summarizer-backend.onrender.com/summarize",  # Update with your Render backend URL
+            "https://summarizer-flask.onrender.com",  # Update with your Render backend URL
             json={"topic": topic}
         )
         data = response.json()
